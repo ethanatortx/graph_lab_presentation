@@ -78,7 +78,7 @@ namespace error
 			iterator_range = std::pair<int, int>(0, 0);
 		}
 
-		set_iterator_range(int first, int last)
+		void set_iterator_range(int first, int last)
 		{
 			iterator_range.first = first;
 			iterator_range.second = last;

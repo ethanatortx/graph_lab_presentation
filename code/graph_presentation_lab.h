@@ -50,16 +50,19 @@ public:
 
 	void add_node(const value_type& data);
 	void add_node(const value_type& data, const list<edge>& adj);
+	void remove_node(const value_type& data);
 
-	void get_adjacent_to(const value_type& data);
+	list<edge> get_adjacent_to(const value_type& data);
 
 	std::pair<list<node*>, long double> shortest_path(const value_type& origin, const value_type& dest);
 
+	double is_edge(const value_type& source, const value_type& dest);
 	void add_edge(const value_type& source,
 		const value_type& dest, double cost);
+	void remove_edge(const value_type& source,
+		const value_type& dest);
 
 private:
-
 	typedef std::map<value_type, node*, std::less<value_type> > nmap;
 	nmap node_map;
 };
