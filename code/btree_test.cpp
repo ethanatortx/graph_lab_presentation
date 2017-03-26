@@ -14,9 +14,6 @@ int main()
 		b.insert(k);
 		std::cout << "Data in tree: \n";
 		b.print();
-		std::cout << "\nTree histogram: \n";
-		b.print_histogram();
-		std::cout << "\nSize of tree: \n" << b.size() << '\n';
 	}
 
 	b.print();
